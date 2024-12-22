@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+}
+
+.table-container {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 99%;
+}
+
+td {
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-size: large;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:last-child {
+  border-bottom: 2px solid #00bcd4;
+}
+
+.header-row {
+  background-color: #eeeeee;
+  border-top: 2px solid #00bcd4;
+}
+
+.header-row input {
+  border: none;
+  background-color: #eeeeee;
+  font-weight: 700;
+  width: 88%;
+  padding: 8px;
+  text-align: center;
+}
+.header-row input:focus {
+  border: none;
+  outline: none;
+}
+
+.row input {
+  border: none;
+  width: 88%;
+  padding: 8px;
+  text-align: center;
+}
+.row input:focus {
+  border: none;
+  outline: none;
+  background-color: #e3a404;
+}
+
+tr input[formControlName="radar"] {
+  background-color: #d9efee;
+  font-weight: 700;
+  color: black;
+  width: 88%;
+}
+
+td:has(input[formControlName="radar"]) {
+  background-color: #d9efee;
+}
+
+tr input[formControlName="falcon"] {
+  background-color: #e5f3e6;
+  font-weight: 700;
+  color: black;
+  width: 88%;
+}
+
+td:has(input[formControlName="falcon"]) {
+  background-color: #e5f3e6;
+}
+
+tr input[formControlName="option"] {
+  text-align: left;
+}

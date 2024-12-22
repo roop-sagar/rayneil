@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  display: flex;
+  height: 93vh;
+}
+
+.header {
+    width: 100vw;
+    height: 8vh;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.header span {
+    font-size: xx-large;
+    font-family: cursive ;
+    margin-left: 10px;
+}
+
+.sidenav {
+  width: 15vw;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
+  width: 85vw;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

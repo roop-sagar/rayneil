@@ -1,0 +1,24 @@
+<div class="tree">
+    <ng-container>
+      <div>
+        <div (click)="toggleNode($event)" class="menu">
+          <span class="material-symbols-outlined"> sports_soccer </span>
+          &nbsp;Soccer
+        </div>
+        <div class="parent">
+          <ng-container *ngFor="let node of treeData">
+              <div (click)="toggleNode($event)" style="padding: 8px;">
+                {{ node.name }}
+              </div>
+              <div class="child">
+                <ng-container *ngFor="let child of node.children">
+                  <div (click)="getMatchData(child.id)">
+                    {{ child.name }}
+                  </div>
+                </ng-container>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+</div>

@@ -1,0 +1,65 @@
+<div class="table-container">
+  {{ title }}
+  <form [formGroup]="tableForm">
+    <table>
+      <thead>
+        <tr>
+          <th width="250">Option</th>
+          <th width="90">Radar</th>
+          <th width="90">Falcon</th>
+          <th>Sin Limit</th>
+          <th>Sin Bet</th>
+          <th>Stake</th>
+          <th>P & L</th>
+          <th>Multi Risk</th>
+        </tr>
+      </thead>
+      <tbody
+        formArrayName="rows"
+        *ngIf="matchDataSource?.length > 0; else elseBlock"
+      >
+        <tr
+          *ngFor="let row of rows.controls; let i = index"
+          [formGroupName]="i"
+          [ngClass]="row.value.head ? 'header-row' : 'row'"
+        >
+          <td><input formControlName="option" /></td>
+          <td><input formControlName="radar" /></td>
+          <td>
+            <input
+              formControlName="falcon"
+              (keydown)="onKeyDown($event, i, 'falcon')"
+              (focus)="onFocus($event, i, 'falcon')"
+              (focusout)="onFocusOut($event, i, 'falcon')"
+            />
+          </td>
+          <td>
+            <input
+              formControlName="sinLimit"
+              (keydown)="onKeyDown($event, i, 'sinLimit')"
+              (focus)="onFocus($event, i, 'sinLimit')"
+              (focusout)="onFocusOut($event, i, 'sinLimit')"
+            />
+          </td>
+          <td><input formControlName="sinBet" /></td>
+          <td><input formControlName="stake" /></td>
+          <td><input formControlName="pandl" /></td>
+          <td><input formControlName="multiRisk" /></td>
+        </tr>
+      </tbody>
+      <ng-template #elseBlock>
+        <tbody>
+          <tr>
+            <td
+              colspan="8"
+              rowspan="2"
+              style="text-align: center; font-size: large; padding: 15px"
+            >
+              No Data
+            </td>
+          </tr>
+        </tbody>
+      </ng-template>
+    </table>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="header">
+  <span>FALCON WAGER</span>
+</div>
+<div class="container">
+  <div class="sidenav">
+    <app-side-menu (emitMatchId)="hanldeEmitMatchId($event)"></app-side-menu>
+  </div>
+  <div class="content">
+    <app-match-detail [matchDataSource]="matchDataSource"></app-match-detail>
+  </div>
+</div>

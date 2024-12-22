@@ -1,0 +1,38 @@
+.tree {
+  padding: 2px;
+}
+
+.tree div {
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: #afc8d5;
+  padding: 5px;
+}
+
+.parent > div {
+  background-color: #d4e6eb;
+  border-bottom: 1px solid white;
+  font-weight: 100;
+}
+
+.child > div {
+  border-bottom: 1px solid white;
+  padding: 8px;
+  background-color: #ecf8fe;
+}
+
+.child {
+  display: none;
+}
+
+.expanded + .parent {
+  display: none;
+}
+
+.expanded + .child {
+  display: block;
+}
